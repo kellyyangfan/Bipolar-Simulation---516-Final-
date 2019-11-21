@@ -11,6 +11,10 @@ public class Environment : MonoBehaviour
     public GameObject player;
     public Rigidbody playerRigidBody;
 
+    public Vector3 currentPos;
+    public Vector3 prevPos;
+    public Vector3 delta;
+
     GameObject closestCornerForPath;
     public float distToNextCorner;
 
@@ -31,20 +35,34 @@ public class Environment : MonoBehaviour
 
         speed = 1.0f;
 
+        prevPos = Vector3.zero;
+
         //player.transform.position = pathParent.transform.position;
         //player.transform.forward = pathMesh.transform.forward;
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentPos = player.GetComponent<Rigidbody>().position;
+
+        delta = currentPos - prevPos;
+        print(delta);
+
+        prevPos = currentPos;
+
         //closestCornerForPath = player.GetComponent<PlayerScript>().closestCornerPrefab;
         //distToNextCorner = player.GetComponent<PlayerScript>().distBetween;
         //pathParent.transform.LookAt(center);
-    //}
+        //}
 
-    //private void OnTriggerStay(Collider other)
-    //{
+        //private void OnTriggerStay(Collider other)
+        //{
         //while(player.transform.forward == pathMesh.transform.forward)
         {
             pathParent.transform.RotateAround(Vector3.zero, Vector3.down, 10 * Time.deltaTime);
@@ -63,7 +81,7 @@ public class Environment : MonoBehaviour
 
                 //pathParent.transform.RotateAround(Vector3.zero, Vector3.up, 45.0f);
 
-                pathParent.transform.position = Vector3.Slerp(pathParent.transform.position, closestCornerForPath.transform.position, Time.deltaTime);
+                //pathParent.transform.position = Vector3.Slerp(pathParent.transform.position, closestCornerForPath.transform.position, Time.deltaTime);
             }
         }
 
