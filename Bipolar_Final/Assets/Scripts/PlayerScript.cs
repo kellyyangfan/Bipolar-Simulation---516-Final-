@@ -10,13 +10,22 @@ public class PlayerScript : MonoBehaviour
     public Transform closestCorner;
     public GameObject closestCornerPrefab;
 
+    public Transform pathParent;
+
+    public GameObject nextCorner;
+
+    public float rotSpeed;
+
     Color lineColor;
 
     // Start is called before the first frame update
     void Start()
     {
         closestCorner = null;
+        closestCornerPrefab = null;
         lineColor = new Color(50, 30, 25);
+
+        rotSpeed = 1.0f;
     }
 
     // Update is called once per frame
@@ -29,13 +38,38 @@ public class PlayerScript : MonoBehaviour
         closestCornerPrefab = closestCorner.gameObject;
         Debug.DrawLine(transform.position, closestCorner.transform.position, Color.red);
 
-        
+        if(closestCornerPrefab.transform.name == "1")
+        {
+            nextCorner = GameObject.Find("2");
+            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+        }
+        else if (closestCornerPrefab.transform.name == "2")
+        {
+            nextCorner = GameObject.Find("3");
+            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+        }
+        else if (closestCornerPrefab.transform.name == "3")
+        {
+            nextCorner = GameObject.Find("4");
+            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+        }
+        else if (closestCornerPrefab.transform.name == "4")
+        {
+            nextCorner = GameObject.Find("1");
+            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+        }
+
+
     }
 
     Transform GetClosestEdge(Transform[] edges)
     {
         Transform bestTarget = null;
-        float closestDistanceSqr = Mathf.Infinity;
+        float closestDistanceSqr = 0.5f;
         Vector3 currentPosition = transform.position;
         foreach (Transform potentialTarget in edges)
         {
