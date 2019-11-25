@@ -40,7 +40,7 @@ public class DelayedMovement : MonoBehaviour
 
         if (NewPos != PrevPos)
         {
-            //pathMesh.transform.position += pathMesh.transform.forward * Time.deltaTime * ((ObjVelocity.sqrMagnitude)/5);
+            pathMesh.transform.position += -(pathMesh.transform.forward) * Time.deltaTime * ((ObjVelocity.sqrMagnitude)/5);
             print("LOCATION CHANGED");
             StartCoroutine(startDelay());
 
@@ -51,8 +51,9 @@ public class DelayedMovement : MonoBehaviour
 
     IEnumerator startDelay()
     {
-        yield return new WaitForEndOfFrame();
-        pathMesh.transform.RotateAround(player.transform.position, Vector3.up, 30 * Time.deltaTime);
+        transform.RotateAround(Vector3.zero, Vector3.up, 20 * Time.deltaTime);
+        yield return new OVRWaitCursor();
+
     }
 
     // Update is called once per frame

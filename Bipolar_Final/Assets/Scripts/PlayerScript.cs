@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject closestCornerPrefab;
 
     public Transform pathParent;
+    public Transform pathMesh;
 
     public GameObject nextCorner;
 
@@ -41,26 +42,35 @@ public class PlayerScript : MonoBehaviour
         if(closestCornerPrefab.transform.name == "1")
         {
             nextCorner = GameObject.Find("2");
-            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
-            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathMesh.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathMesh.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+
         }
         else if (closestCornerPrefab.transform.name == "2")
         {
             nextCorner = GameObject.Find("3");
-            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
-            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathMesh.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathMesh.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
         }
         else if (closestCornerPrefab.transform.name == "3")
         {
             nextCorner = GameObject.Find("4");
-            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
-            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathMesh.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathMesh.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
         }
         else if (closestCornerPrefab.transform.name == "4")
         {
             nextCorner = GameObject.Find("1");
-            pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
-            pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathParent.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathParent.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
+            //pathParent.transform.rotation = Quaternion.Lerp(pathMesh.transform.rotation, nextCorner.transform.rotation, rotSpeed * Time.deltaTime);
+            //pathParent.transform.position = Vector3.Lerp(pathMesh.transform.position, closestCornerPrefab.transform.position, Time.deltaTime);
         }
 
 
