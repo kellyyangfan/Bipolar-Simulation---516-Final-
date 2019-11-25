@@ -1,0 +1,4 @@
+#Sun Nov 24 19:17:46 EST 2019
+base.0=/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

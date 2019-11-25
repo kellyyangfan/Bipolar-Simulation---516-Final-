@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/res/merged/release/mipmap-mdpi_app_icon.png.flat",
+        "source": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/src/main/res/mipmap-mdpi/app_icon.png"
+    },
+    {
+        "merged": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/src/main/res/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/res/merged/release/mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/src/main/res/mipmap-anydpi-v26/app_icon.xml"
+    },
+    {
+        "merged": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/res/merged/release/mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/src/main/res/mipmap-anydpi-v26/app_icon_round.xml"
+    },
+    {
+        "merged": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/build/intermediates/res/merged/release/xml_network_sec_config.xml.flat",
+        "source": "/Users/yangfuchia/Documents/Purdue/CGT516/Bipolar-Simulation---516-Final-/Bipolar_Final/Temp/gradleOut/src/main/res/xml/network_sec_config.xml"
+    }
+]
